@@ -1,0 +1,7 @@
+api/myenv/
+api/__pycache__/
+api/dev.txt
+**/__pycache__/
+**/*.pyc
+.git/
+node_modules/
