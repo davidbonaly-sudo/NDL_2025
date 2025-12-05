@@ -7,7 +7,7 @@
  * @returns {Promise<object>} La réponse JSON du serveur.
  */
 export async function createResource(endpoint, payload) {
-  const url = `/api${endpoint}`; 
+  const url = `http://http://145.223.81.154/api${endpoint}`; 
 
   try {
     const response = await fetch(url, {
