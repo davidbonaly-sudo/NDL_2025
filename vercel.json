@@ -2,15 +2,15 @@
   "version": 2,
   "builds": [
     {
+      "src": "api/main.py",
+      "use": "@vercel/python"
+    },
+    {
       "src": "frontend/package.json",
       "use": "@vercel/static-build",
       "config": {
         "distDir": "dist"
       }
-    },
-    {
-      "src": "api/main.py",
-      "use": "@vercel/python"
     }
   ],
   "routes": [
@@ -20,9 +20,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "frontend/$1"
+      "dest": "frontend/dist/$1"
     }
-  ],
-  "installCommand": "npm install --prefix frontend && pip install -r requirements.txt",
-  "buildCommand": "npm run build --prefix frontend"
+  ]
 }
