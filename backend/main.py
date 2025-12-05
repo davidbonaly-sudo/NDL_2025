@@ -30,7 +30,7 @@ class Resource(BaseModel):
     status: str = "pending" # Attente d'un champ 'status', par défaut 'pending'
 
 # Endpoint POST qui reçoit le contenu du frontend
-@app.post("/api/resources")
+@app.post("/resources")
 async def create_resource(resource: Resource):
     """
     Récupère le payload dans l'objet 'resource'.
@@ -59,7 +59,7 @@ async def create_resource(resource: Resource):
         }
     }
 
-@app.post("/api/chien_gpt")
+@app.post("/chien_gpt")
 async def chien_gpt(resource: Resource):
     """
     Récupère le payload dans l'objet 'resource'.
