@@ -7,7 +7,7 @@
  * @returns {Promise<object>} La réponse JSON du serveur.
  */
 export async function createResource(endpoint, payload) {
-  const url = `http://localhost:3000/api${endpoint}`; 
+  const url = `/api${endpoint}`; 
 
   try {
     const response = await fetch(url, {
